@@ -5,8 +5,9 @@ forma.addEventListener('submit', event => {
     email: event.target.elements.email.value.trim(),
     password: event.target.elements.password.value.trim(),
   };
-  if (user.email.trim() === '' || user.password.trim() === '') {
+  if (user.email === '' || user.password === '') {
     alert('All form fields must be filled in');
+    return;
   }
   event.target.reset();
   console.log(user);
